@@ -76,6 +76,7 @@ export default [
         "name": "confirmation",
         "message": "Is this information correct?",
         // TODO: Find a way to review all the questions before confirming
+        /*
         "validate": (value,answers) => {
             if(value.toLowerCase() !== "yes"){
                 console.error("Aborting. Try again later.");
@@ -83,5 +84,6 @@ export default [
             }
             return true;
         }
+        */
     }
 ];

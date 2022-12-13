@@ -46,7 +46,7 @@ export default class Section {
     tocEntry(){
         const indent = (this.#level > 2) ? " ".repeat((this.#level - 2) * 2) : "";
         const link   = this.#header.toLowerCase().replace(/\s/g,"-");   // TODO: Probably should use a function later in replace
-        return `${indent}- [${this.#header}](#${link})`
+        return `${indent}- [${this.#header}](#${link})`;
     }
     /**
      * @method entry
@@ -54,12 +54,7 @@ export default class Section {
      * @returns {array}
      */
     entry(){
-        return [
-            `${"#".repeat(this.#level)} ${this.#header}`,
-            `\n`,
-            `${this.#content}`,
-            `\n`
-        ];
+        return `${"#".repeat(this.#level)} ${this.#header}\n\n${this.#content}\n\n`;
     }
     /**
      * @method entryString

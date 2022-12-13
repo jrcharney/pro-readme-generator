@@ -19,7 +19,9 @@ export default class MDDoc {
     constructor(titleHeader = "",titleContent = "",...sections){
         this.#titleSection = new Section(titleHeader,titleContent,1);  // Give it a level 1 header
         this.#tocSection = new Section("Table of Contents","");       // Empty for now
-        this.sections = sections;
+        if(sections.length > 0){
+            this.sections = sections;
+        }
     }
     /**
      * @set titleHeader
@@ -67,7 +69,7 @@ export default class MDDoc {
      * @returns {string}
      */
     writeTOC(){
-        this.#tocSection.content = this.#sections.forEach((section) => section.tocEntry()); // .join("");
+        this.#tocSection.content = this.#sections.map((section) => section.tocEntry()).join("\n");
         return this.#tocSection.entry();
     }
     /**
@@ -77,7 +79,7 @@ export default class MDDoc {
      */
     writeBody(){
         // We should double space this
-        return this.#sections.forEach((section) => section.entry()); //.join(`\n`);
+        return this.#sections.map((section) => section.entry()).join("\n");
     }
     /**
      * @method writeDoc
@@ -85,10 +87,10 @@ export default class MDDoc {
      * @returns {string}
      */
     writeDoc(){
-        // HEREDOC! (Hopefully we won't need to insert newlines here)
-        return `
-${this.writeTitleSection()}
-${this.writeTOC()}
-${this.writeBody()}`;
+        return [
+            this.writeTitleSection(),
+            this.writeTOC(),
+            this.writeBody()
+        ].join("");
     }
 }
