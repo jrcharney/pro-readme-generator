@@ -72,7 +72,11 @@ function init() {
         // TODO: Sanitize filenames
         // replace regex borrowed from https://bobbyhadz.com/blog/javascript-remove-file-extension-from-string
         //const filename = `${data.filename.replace(/\.[^\/.]+$/, '')}.md`
-        writeToFile(answers.filename,answers);
+        if(answers.confirmation){
+            writeToFile(answers.filename,answers);
+        }else{
+            console.log("Aborting. Try again later.");
+        }
     })
     .catch((error) => {
         if(error.isTtyError){
