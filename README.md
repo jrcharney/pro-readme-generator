@@ -1,10 +1,14 @@
 # Professional README Generator
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ou2atBvRC8c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Watch the video](https://img.youtube.com/vi/ou2atBvRC8c/maxresdefault.jpg)](https://youtu.be/ou2atBvRC8c)
 
-<!-- [![INSERT SCREENSHOT HERE](assets/images/screenshot.png)](https://jrcharney.github.io/pro-readme-generator) -->
+Use this program
 
-![Input Screenshot](assets/images/screenshot.png)
+![Input Screenshot](assets/images/input_screenshot.png =200x200)
+
+To create Readme files that look like this.
+
+![Example README screenshot](assets/images/readme_screenshot.png =200x200)
 
 Homework Challenge 9. Due December 5, 2022.
 
@@ -19,6 +23,30 @@ A few things worth noting:
 * [git-ignore](https://github.com/sondr3/git-ignore) should add a `git ignore` command to build `.gitignore` files. `node init`should have a similar feature. Alternately, [gitignore.io](https://gitignore.io/) (which was why the git-ignore project exists) is still around and will allow to generate a `.gitignore` file in the broswer.
 
 These are important things to know because this project does the one thing `node init` still doesn't do: Generate a `README.md`.
+
+## Installation
+
+You need to run this first to download some of the package requirements.  The project wanted users to use Node 18, but I'm using Node 16 and everything works fine. It should work for Node 18.
+
+```bash
+node i
+```
+
+## Tests
+
+```bash
+node test
+```
+
+I wanted to set some stuff up with Jasmine. Didn't really get around to doing that.  Oh well, that was optional. I wanted to dig out some old Launchcode stuff I had.
+
+## Usage
+
+OK, the important part.
+
+```bash
+node index.js
+```
 
 ## User Story
 
