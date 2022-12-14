@@ -4,11 +4,11 @@
 
 Use this program
 
-![Input Screenshot](assets/images/input_screenshot.png =200x200)
+<img alt="Input Screenshot" width="200" height="200" src="assets/images/input_screenshot.png"/>
 
 To create Readme files that look like this.
 
-![Example README screenshot](assets/images/readme_screenshot.png =200x200)
+<img alt="Example README Screenshot" width="200" height="200" src="assets/images/readme_screenshot.png"/>
 
 Homework Challenge 9. Due December 5, 2022.
 
